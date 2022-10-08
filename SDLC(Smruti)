@@ -1,0 +1,386 @@
+           # SDLC
+           
+ - For project development rules & regulation need to be followed for best quality output at defined time limit
+ - Rules are Software Devlopment Life Cycle-SDLC
+ - It's part of software engineering
+ - Six rules to be followed...
+ 
+ ~ Requirement Gathering
+ ~ Analysis & SRS
+ ~ Designing
+ ~ Implementation(coding)
+ ~ Testing
+ ~ Maintenance
+ 
+ 
+ @ SDLC
+ Requirement Gathering -> Analysis & SRS -> Designing -> Implementation(coding) -> Testing -> Maintenance
+                  
+            
+ @ DFD
+ - DFD-Data Flow Diagrams
+ - Graphical representation of flow of data inside application can also be used for visualization and data processing
+ 
+ ~ DFD elemrnts are..
+  - External Entity
+  - Process
+  - Data Flow
+  - Data Store
+  
+ 
+ 1) External Entity
+ 
+ Can be user or external system that performs some process or activity in project
+ Symbolized with rectangle
+ Like, we have entity 'admin' then symbol will be
+ 
+         Admin
+         
+         
+ 2) Process
+ 
+ - Work or action taken on incoming data to produce output 
+ - Each process must have input and putput
+ - Symbolized as
+ 
+        input -> 1.Login -> output
+ 
+ 3) Data Flow
+ 
+ - Can be used to show input and output of data
+ - Should be named uniquely and don't include word 'data'
+ - Name can be 'payment','order','complaint' etc
+ - Symbolized as
+         
+         ->
+         
+ 4) Data Store
+ 
+ - Can be used to show database tables
+ - Only process may connect data stores
+ - There can be two or more process sharing same data store
+ - Symbolized as
+         
+         Registration_Master
+         
+         
+  ~ DFD Rules 
+  
+  - 6 rules to follow
+  - Consider data flow diagram as given below
+  
+
+
+      <--------------------------------------------- completed claim form <---------------------------------------------------
+     |                                                                                                                        |
+     |      ->  membership details ----------->                                                                           Member
+     |                                          [D1(Members)]                                                                 |
+{1.Register <-  financial membership details <-                                                                          claim decision
+  Claim                                                                                                                       |
+  Form}                                                      -> valid claim form ---->   {2.Make     -> assessor      ->      |
+            ->  valid claim form -------------->[D2(Claims)] <- assessed claim form <-    Assessment}   rcommendation     {3.Action 
+                                                             -> assessed claim form ----------------------------------->    Claim}
+                                                             <- Claim decision <----------------------------------------
+
+
+
+
+  @ Rule 1
+  
+  -Each process must have data flowing into it and coming out from it
+  
+  @ Rule 2
+  
+  -Each process must have data flowing into it and coming out from it
+  
+  @ Rule 3
+  
+  -A data flow out of a process should have some relevance to one or more of the data flows into a process  
+  -In process 3 all data flows are connected to process claim
+  -The claim decision can not be made untill the claim from has been submitted and the assessor maker a recommendation 
+  
+  @ Rule 4
+  
+  -Data stored in system must go through a process
+  
+  @ Rule 5
+  
+  -Two data stores can't communicate with each other unless process is involved in between
+  
+  @ Rule 6
+  
+  -The process in DFD must be linked to either another process or a data store
+  -A process can't be exist by itself,unconnected to rest of the system
+  
+  
+  # Context level
+  
+  DFD level-0
+  
+  It's also context level DFD
+  Context level diagrams show all external entities.
+  They do not show any data store.
+  The do not show any data stores.
+  The context diagrams always has only one process labelled 0.
+  
+  DFD Level-2(or2)
+  
+  ~ Include all entities and data stores that are directly connected by data flow to the one process you are breaking down show all other data stores that are shared by the processes in this breakdown
+  
+  ~ Like login process will linked to users & database in further leveling 
+  
+  
+  # Flow Charts...
+  
+  - Used to show algorithm or process
+  
+  - Can give step by step solution to the problem
+  
+  - The first flow chart was made by John Von Newman in 1945
+ 
+  - Pictorial view of process
+  
+  - Heltful for beginner and programmers 
+  
+  - Flowcharts are generally drawn in the early stages of formulating computer solutions.
+  
+  - Flowcharts facilitate communication between programming of a programmers and business people.
+  
+  - These flowchart play a vital role in the programming of a problem and are quite helpful in understanding the logic of complicated and lengthy problems.
+  
+  - Once the flowchart is drawn, it becomes easy to write the program in any high level language.
+  
+  - Once we see how flowcharts are helpful in explaining the program to others.
+  
+  - Hence, it is correct to say that a flowchart is a must for the better documentation of a complex program.
+  
+  
+  Symbols are..
+  
+  1) Start Or End
+  
+   -  Show starting or ending of any flow chart
+   -  Symbolized as
+    
+       Start      OR       End
+       
+       
+  2) Process
+  
+   - Defines a process like defining variables or initializing variable or performing any computation 
+   - Symbolized as
+     
+       res = num1 + num2
+       
+       
+  3) Input or output 
+   
+   - Used when user have to get or initialize any variable 
+   - Liked get num1 and num2 from user
+   - Suymbolized as
+    
+      Int num1, num2
+      
+      
+   4) Decision Making
+   
+   - For checking condition this symbols can be used
+   - Like if num1 is greter than num2
+   - Can be symbolized as
+    
+      If num1>num2
+      
+    
+   5) Flow lines 
+   
+   - Lines showing flow of data and process 
+   - Showin flow of instruction also
+   - Can be symbolized as
+   
+       ->
+       
+ @  Any program can be in three format
+   
+   - Linear or sequence
+   
+   - Branching
+   
+   - Looping
+   
+  Following are notating can be used to show this format
+  
+  
+  ~ Linear Program Structure
+   
+                                    Start
+                                      |
+                                  Process-1
+                                      |
+                                  Process-2
+                                      |
+                                     End
+            
+            
+   ~ Branching Program Structure..
+    
+                                    Start
+                                      |
+                        ---------- Process-1 ---------  
+                        |             |              |
+                     Process-1     Process-1     Process-1
+                        \             |              /
+                                     End
+   
+   
+   
+   ~ Looping Program Structure
+   
+                                    Stark
+                                      |
+                                  Process-1 <------
+                                      |      yes   |
+                                  Process-1--------
+                                      |
+                                  Process-1
+                                      |no
+                                     End
+   
+   
+   
+   
+       
+       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+         
+         
+         
+         
+         
+         
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
